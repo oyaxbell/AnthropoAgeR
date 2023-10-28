@@ -1,4 +1,4 @@
-Package: AnthropoAge
+Package: AnthropoAgeR
 Title: Calculate second-generation biological aging measures using AnthropoAge and PhenoAge
 Version: 0.1.0
 Description: What the package does (one paragraph).
@@ -25,3 +25,5 @@ Imports:
     tibble,
     tidyr
 Suggests: utils,assertthat
+URL: https://github.com/oyaxbell/AnthropoAgeR
+BugReports: https://github.com/oyaxbell/AnthropoAgeR/issues

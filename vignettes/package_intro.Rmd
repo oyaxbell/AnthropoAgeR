@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-The `AnthropoAge` package cfacilitate estimation of second-generation biological aging measures derived from body-composition measures (AnthropoAge, S-AnthropoAge) and PhenoAge in R. This package also allows for estimation of sex-stratified accelerated aging measures PhenoAgeAccel and AnthropoAgeAccel. These metrics are derived from work by Fermín-Martínez CA et al (Aging Cell, 2023) and Levine M et al (Aging, 2018).
+The `AnthropoAgeR` package cfacilitate estimation of second-generation biological aging measures derived from body-composition measures (AnthropoAge, S-AnthropoAge) and PhenoAge in R. This package also allows for estimation of sex-stratified accelerated aging measures PhenoAgeAccel and AnthropoAgeAccel. These metrics are derived from work by Fermín-Martínez CA et al (Aging Cell, 2023) and Levine M et al (Aging, 2018).
 
 AnthropoAge is a second-generation biological aging biomarker developed to estimate 10-year mortality years expressed as age using anthropometric measurements. The full version of AnthropoAge uses chronological age, sex, ethnicity, weight, height, waist circumference, subscapular and triceps skinfold thickness (for women), and arm and thigh circunference (for men). The simplified version of AnthropoAge uses the body-mass index and the waist-to-height ratio. The full version of AnthropoAge can be calculated using the `anthropoage()` function, whilst the simplified version can be calculated using the `s_anthropoage()` function.
 

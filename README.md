@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# AnthropoAge <img src="inst/figures/AnthropoAge.png" align="right" width="180" height="200"/>
+# AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="200"/>
 
 <!-- badges: start -->
 
@@ -26,7 +26,7 @@ Instituto Nacional de Geriatría, Mexico City, Mexico
 
 ------------------------------------------------------------------------
 
-The `AnthropoAge` package cfacilitate estimation of second-generation
+The `AnthropoAgeR` package cfacilitate estimation of second-generation
 biological aging measures derived from body-composition measures
 (AnthropoAge, S-AnthropoAge) and PhenoAge in R. This package also allows
 for estimation of sex-stratified accelerated aging measures
@@ -58,7 +58,7 @@ You can install the development version of `AnthropoAge` from Github
 
 ``` r
 # install.package("remotes")   #In case you have not installed it.
-remotes::install_github("oyaxbell/anthropoageR")
+remotes::install_github("oyaxbell/AnthropoAgeR")
 ```
 
 Alternatively, you will soon be able install the released version of
@@ -79,7 +79,7 @@ AnthropoAge. The function can also be used to calculate AnthropoAge in a
 large cohort.
 
 ``` r
-library(AnthropoAge)
+library(AnthropoAgeR)
 
 ## Male
 age1<-anthropoage(Age=31, Sex="Men", Weight=75,
@@ -108,7 +108,7 @@ AnthropoAge in a large cohort; for this latter purpose
 the`s_anthropoage_fast()` function is recommended.
 
 ``` r
-library(AnthropoAge)
+library(AnthropoAgeR)
 
 ## Calculate s_anthropoage in a single individual ##
 
@@ -138,7 +138,7 @@ provides an example for a calculation of PhenoAge in a single
 individual.
 
 ``` r
-library(AnthropoAge)
+library(AnthropoAgeR)
 
 ## Calculate phenoage in a single individual ##
 
@@ -160,7 +160,7 @@ indicate accelerated aging rates, whilst values\<0 indicate
 non-accelerated aging rates.
 
 ``` r
-library(AnthropoAge)
+library(AnthropoAgeR)
 
 ## Calculate age acceleration in a single individual ##
 

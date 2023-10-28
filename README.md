@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="200"/>
+# AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="190"/>
 
 <!-- badges: start -->
 
@@ -20,9 +20,9 @@ Instituto Nacional de Geriatría, Mexico City, Mexico
 
 [![](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/bellochavolla_lab)
 
-[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://facebook.com/bellochavollalab)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/oyaxbell)
 
-[![](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://github.com/oyaxbell)
+[![](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/bellochavollalab)
 
 ------------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ protein. PhenoAge can be calculated using the `phenoage()` function.
 
 ## Installation
 
-You can install the development version of `AnthropoAge` from Github
+You can install the development version of `AnthropoAgeR` from Github
 
 ``` r
 # install.package("remotes")   #In case you have not installed it.

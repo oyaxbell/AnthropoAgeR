@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="200"/>
+# AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="190"/>
 
 <!-- badges: start -->
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/AnthropoAge?color=green)](https://cran.r-project.org/package=AnthropoAge)
@@ -44,7 +44,7 @@ PhenoAge is a  second-generation aging biomarker developed to estimate 10-year m
 
 ## Installation
 
-You can install the development version of `AnthropoAge` from Github
+You can install the development version of `AnthropoAgeR` from Github
 
 ``` r
 # install.package("remotes")   #In case you have not installed it.

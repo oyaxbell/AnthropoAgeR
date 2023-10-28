@@ -1,0 +1,27 @@
+Package: AnthropoAge
+Title: Calculate second-generation biological aging measures using AnthropoAge and PhenoAge
+Version: 0.1.0
+Description: What the package does (one paragraph).
+VignetteBuilder: knitr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Authors@R: c(
+    person("Omar Yaxmehen", "Bello-Chavolla", , "oyaxbell@yahoo.com.mx", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0003-3093-937X")),
+    person("Carlo Alberto", "Fermin-Martínez", , "carlosfermin38@gmail.com", role = "ctb",
+           comment = c(ORCID = "https://orcid.org/0000-0001-5627-8851"))
+  )
+Depends:
+    R (>= 4.1)
+Imports: 
+    tidyverse,
+    knitr,
+    testthat,
+    flexsurv,
+    stats,
+    parallel,
+    tibble,
+    tidyr
+Suggests: utils,assertthat

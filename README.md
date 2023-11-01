@@ -64,7 +64,7 @@ Alternatively, you will soon be able install the released version of
 
 ``` r
 # not approved yet
-# install.packages("globorisk")
+# install.packages("AnthropoAgeR")
 ```
 
 ## Example

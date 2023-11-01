@@ -1,4 +1,21 @@
-#' @method
+#' @method predict flexsurvreg
+
+rename_tidy <- function(x){
+  names_map <- tibble::tibble(
+    old_names = c("time", "quantile", "est", "se", "lcl", "ucl"),
+    new_names  = c(".time", ".quantile", ".pred",
+                   ".std_error", ".pred_lower", ".pred_upper")
+  )
+
+  x <- lapply(x, function (x) {
+    for (i in seq_along(names_map$old_names)) {
+      colnames(x)[colnames(x)==names_map$old_names[i]] <- names_map$new_names[i]
+    }
+    x
+  })
+  x
+}
+
 
 predict.flexsurvreg <- function(object,
                                 newdata,
@@ -60,23 +77,7 @@ predict.flexsurvreg <- function(object,
   res <- tibble::tibble(.pred = res)
 
   if (!nest_output) {
-    res <- tidyr::unnest(res, .pred)
+    res <- tidyr::unnest(res, ".pred")
   }
   res
-}
-
-rename_tidy <- function(x){
-  names_map <- tibble::tibble(
-    old_names = c("time", "quantile", "est", "se", "lcl", "ucl"),
-    new_names  = c(".time", ".quantile", ".pred",
-                   ".std_error", ".pred_lower", ".pred_upper")
-  )
-
-  x <- lapply(x, function (x) {
-    for (i in seq_along(names_map$old_names)) {
-      colnames(x)[colnames(x)==names_map$old_names[i]] <- names_map$new_names[i]
-    }
-    x
-  })
-  x
 }

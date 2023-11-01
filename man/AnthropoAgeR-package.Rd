@@ -4,7 +4,7 @@
 \name{AnthropoAgeR-package}
 \alias{AnthropoAgeR}
 \alias{AnthropoAgeR-package}
-\title{AnthropoAgeR: Calculate second-generation biological aging measures using AnthropoAge and PhenoAge}
+\title{AnthropoAgeR: Calculate Second Generation Biological Aging Measures Using AnthropoAge and PhenoAge}
 \description{
 What the package does (one paragraph).
 }

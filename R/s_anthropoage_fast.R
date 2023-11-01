@@ -4,6 +4,9 @@
 #' @import parallel
 #' @import tibble
 #' @import tidyr
+#' @import foreach
+#' @import doParallel
+#' @import iterators
 
 s_anthropoage_fast<-function(Age, Sex, Height, Weight, Waist, Ethnicity){
   BMI<-Weight/(Height^2)
@@ -21,6 +24,7 @@ s_anthropoage_fast<-function(Age, Sex, Height, Weight, Waist, Ethnicity){
   ## Loop for parallel S-AnthropoAge estimation ##
   cl <- makeCluster(detectCores()); registerDoParallel(cl); chunk_size <- 1000
   it <- iter(seq(1, nrow(x), by = chunk_size), chunksize = chunk_size)
+  idx<-NULL
   for(i in 1:nrow(x)){
     if(x$Sex[i]=="Women"){
       predict_chunk <- function(idx) {chunk <- x[idx:min(idx + chunk_size - 1, nrow(x)), ]

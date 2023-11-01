@@ -4,6 +4,7 @@
 #' @import parallel
 #' @import tibble
 #' @import tidyr
+
 s_anthropoage<-function(Age, Sex, Height, Weight, Waist, Ethnicity){
   # Data frame including Age (years), Sex (coded as "Men" and "Women"), Height (cm), Weight (kg),
   # Waist (cm) and Ethnicity (coded as "White", "Black", "Mexican-American" and "Others")

@@ -3,14 +3,6 @@
 
 # AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="190"/>
 
-<!-- badges: start -->
-
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/AnthropoAge?color=green)](https://cran.r-project.org/package=AnthropoAge)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/AnthropoAge?color=green)](https://cran.r-project.org/package=AnthropoAge)
-[![](http://cranlogs.r-pkg.org/badges/AnthropoAge?color=green)](https://cran.r-project.org/package=AnthropoAge)
-[![](http://cranlogs.r-pkg.org/badges/last-week/AnthropoAge?color=green)](https://cran.r-project.org/package=AnthropoAge)
-<!-- badges: end -->
-
 ## Authors
 
 Omar Yaxmehen Bello-Chavolla, Carlos Alberto Fermín-Martínez

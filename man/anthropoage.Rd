@@ -28,19 +28,7 @@ anthropoage(Age, Sex, Ethnicity, Height, Weight, Waist,
   \item{Ethnicity}{Ethnicity of an individual based on NHANES codification, it can either take the following values: "White", "Black", "Mexican-American" or "Other"}
 
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
+
 \author{
 Dr. Omar Yaxmehen Belo Chavolla & Dr. Carlos Alberto Fermín Martínez
 
@@ -56,11 +44,6 @@ This version may take longer to estimate AnthropoAge for larger datasets. For co
 
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ## Calculate anthropoage in a single individual ##
 

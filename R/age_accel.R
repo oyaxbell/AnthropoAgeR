@@ -5,6 +5,8 @@
 #' @import stats
 #' @import tibble
 #' @import tidyr
+#' @import knitr
+
 age_accel<-function(Age, BA, Sex){
   n<-length(Age)
   if (n<10){return("For optimal calculations please only estimate AntropoAgeAccel for samples greater than or equal to10")}

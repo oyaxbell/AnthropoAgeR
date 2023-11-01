@@ -4,6 +4,7 @@
 #' @import parallel
 #' @import tibble
 #' @import tidyr
+
 phenoage<-function(Age, CRP, Lymph, WBC, Glu, RCDW,Alb, Cr, MCV, AP){
   x<-NULL
   Cr<-Cr*88.42

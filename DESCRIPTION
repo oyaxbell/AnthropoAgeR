@@ -1,5 +1,5 @@
 Package: AnthropoAgeR
-Title: Calculate second-generation biological aging measures using AnthropoAge and PhenoAge
+Title: Calculate Second Generation Biological Aging Measures Using AnthropoAge and PhenoAge
 Version: 0.1.0
 Description: What the package does (one paragraph).
 VignetteBuilder: knitr
@@ -17,13 +17,15 @@ Depends:
     R (>= 4.1)
 Imports: 
     tidyverse,
-    knitr,
-    testthat,
     flexsurv,
     stats,
     parallel,
     tibble,
-    tidyr
+    tidyr,
+    foreach,
+    doParallel,
+    iterators,
+    knitr
 Suggests: utils,assertthat
 URL: https://github.com/oyaxbell/AnthropoAgeR
 BugReports: https://github.com/oyaxbell/AnthropoAgeR/issues

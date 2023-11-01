@@ -9,7 +9,7 @@ age_accel( ) is used to estimate PhenoAgeAccel and AnthropoAgeAccel, which are t
 
 Estimation of AnthropopoAgeAccel uses as inputs chronological age (Age), sex (Sex, codified as "Men" or "Women"), and Phenoage or AnthropoAge (coded as BA). For AnthropoAge either the complete or simplified version may be used.
 
-AnthropoAgeAccel is interpreted as the average deviation of biological from chronological age and is specific for each population. Values ≥0 indicate accelerated aging rates, whilst values<0 indicate non-accelerated aging rates.
+AnthropoAgeAccel is interpreted as the average deviation of biological from chronological age and is specific for each population. Values >0 indicate accelerated aging rates, whilst values< or =0 indicate non-accelerated aging rates.
 }
 \usage{
 age_accel(Age, BA, Sex)
@@ -21,19 +21,7 @@ age_accel(Age, BA, Sex)
   \item{BA}{Proxy of biological age, measured in years. This values should be estimated using the anthropoage( ), s_anthropoage( ) or phenoage( ) functions within this package.}
 
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
+
 \author{
 Dr. Omar Yaxmehen Belo Chavolla & Dr. Carlos Alberto Fermín Martínez
 
@@ -52,11 +40,6 @@ For PhenoAgeAccel, we recommend implementing a sex-stratified estimation similar
 
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ## Calculate age acceleration in a single individual ##
 

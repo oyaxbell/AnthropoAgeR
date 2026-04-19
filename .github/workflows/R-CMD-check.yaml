@@ -38,6 +38,12 @@ jobs:
           r-version: ${{ matrix.config.r }}
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
+      - name: Install dependencies
+      run: |
+      install.packages("remotes")
+      remotes::install_deps(dependencies = TRUE)
+      install.packages("flexsurv")
+      shell: Rscript {0}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:

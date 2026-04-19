@@ -19,7 +19,8 @@ Imports:
     stats,
     assertthat,
     tibble,
-    tidyr
+    tidyr,
+    flexsurv
 Suggests: 
     utils,
     knitr,

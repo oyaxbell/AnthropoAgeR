@@ -32,7 +32,7 @@ Instituto Nacional de Geriatría, Mexico City, Mexico
 
 ------------------------------------------------------------------------
 
-The `AnthropoAgeR` package cfacilitate estimation of second-generation
+The `AnthropoAgeR` package facilitates estimation of second-generation
 biological aging measures derived from body-composition measures
 (AnthropoAge, S-AnthropoAge) and PhenoAge in R. This package also allows
 for estimation of sex-stratified accelerated aging measures

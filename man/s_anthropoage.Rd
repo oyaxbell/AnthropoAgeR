@@ -17,11 +17,12 @@ s_anthropoage(Age, Sex, Height, Weight, Waist, Ethnicity)
 
 \item{Waist}{Numeric}
 
-\item{Ethnicity}{Character vector}
+\item{Ethnicity}{Character vector ("White", "Black", "Mexican-American", "Other")}
 }
 \value{
 Numeric vector
 }
 \description{
-Computes S-AnthropoAge using anthropometric variables.
+Computes S-AnthropoAge as a proxy of biological age using
+anthropometric variables, age, sex and ethnicity.
 }

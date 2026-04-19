@@ -1,11 +1,14 @@
 #' Fast computation of S-AnthropoAge
 #'
+#' @description Computes S-AnthropoAge as a proxy of biological age using
+#' anthropometric variables, age, sex and ethnicity using a vectorized approach.
+#'
 #' @param Age Numeric vector of age in years
 #' @param Sex Character vector ("Men", "Women")
 #' @param Height Numeric vector (meters)
 #' @param Weight Numeric vector (kg)
 #' @param Waist Numeric vector (cm)
-#' @param Ethnicity Character vector
+#' @param Ethnicity Character vector ("White", "Black", "Mexican-American", "Other")
 #'
 #' @return Numeric vector of S-AnthropoAge
 #' @export

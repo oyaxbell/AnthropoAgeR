@@ -1,10 +1,11 @@
 #' Calculate AnthropoAge
 #'
-#' @description Computes AnthropoAge using anthropometric variables.
+#' @description Computes AnthropoAge as a proxy of biological age using
+#' anthropometric variables, age, sex and ethnicity.
 #'
 #' @param Age Numeric vector
 #' @param Sex Character vector ("Men", "Women")
-#' @param Ethnicity Character vector
+#' @param Ethnicity Character vector ("White", "Black", "Mexican-American", "Other")
 #' @param Height Numeric (meters)
 #' @param Weight Numeric (kg)
 #' @param Waist Numeric

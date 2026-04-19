@@ -17,11 +17,12 @@ s_anthropoage_fast(Age, Sex, Height, Weight, Waist, Ethnicity)
 
 \item{Waist}{Numeric vector (cm)}
 
-\item{Ethnicity}{Character vector}
+\item{Ethnicity}{Character vector ("White", "Black", "Mexican-American", "Other")}
 }
 \value{
 Numeric vector of S-AnthropoAge
 }
 \description{
-Fast computation of S-AnthropoAge
+Computes S-AnthropoAge as a proxy of biological age using
+anthropometric variables, age, sex and ethnicity using a vectorized approach.
 }

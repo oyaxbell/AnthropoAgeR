@@ -22,7 +22,7 @@ anthropoage(
 
 \item{Sex}{Character vector ("Men", "Women")}
 
-\item{Ethnicity}{Character vector}
+\item{Ethnicity}{Character vector ("White", "Black", "Mexican-American", "Other")}
 
 \item{Height}{Numeric (meters)}
 
@@ -42,5 +42,6 @@ anthropoage(
 Numeric vector of AnthropoAge
 }
 \description{
-Computes AnthropoAge using anthropometric variables.
+Computes AnthropoAge as a proxy of biological age using
+anthropometric variables, age, sex and ethnicity.
 }

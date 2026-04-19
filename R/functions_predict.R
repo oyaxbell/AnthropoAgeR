@@ -5,11 +5,13 @@ rename_tidy <- function(x) {
     est = ".pred",
     se = ".std_error",
     lcl = ".pred_lower",
-    ucl = ".pred_upper")
+    ucl = ".pred_upper"
+  )
 
   lapply(x, function(df) {
-    idx <- match(names(df), names_map)
-    names(df)[!is.na(idx)] <- names_map[idx[!is.na(idx)]]
+    old <- names(df)
+    new <- names_map[old]
+    names(df)[!is.na(new)] <- new[!is.na(new)]
     df
   })
 }
@@ -35,6 +37,7 @@ rename_tidy <- function(x) {
 #' @exportS3Method predict flexsurvreg
 #' @importFrom stats predict
 #' @importFrom stats predict model.frame
+
 predict.flexsurvreg <- function(object,
                                 newdata,
                                 type = "response",
@@ -45,59 +48,44 @@ predict.flexsurvreg <- function(object,
                                 p = c(0.1, 0.9),
                                 ...)
 {
-  if (missing(newdata)) newdata <- model.frame(object)
+  if (missing(newdata)) newdata <- stats::model.frame(object)
 
-  assertthat::assert_that(inherits(newdata, "data.frame"))
-  assertthat::assert_that(is.logical(conf.int), is.logical(se.fit))
-  assertthat::assert_that(all(is.numeric(p), p <= 1, p >= 0))
+  type <- match.arg(type, c(
+    "response", "quantile", "link", "lp", "linear",
+    "survival", "cumhaz", "hazard", "rmst"
+  ))
 
-  if (conf.int) {
-    assertthat::assert_that(is.numeric(conf.level),
-                            conf.level > 0, conf.level < 1,
-                            length(conf.level) == 1)
-  }
-
-  type <- match.arg(type, c("response", "quantile", "link", "lp", "linear",
-                            "survival", "cumhaz", "hazard", "rmst"))
-
-  stype <- switch(
-    type,
-    response = "mean",
-    lp = "link",
-    linear = "link",
-    type
+  stype <- switch(type,
+                  response = "mean",
+                  lp = "link",
+                  linear = "link",
+                  type
   )
 
-  if (stype %in% c("survival", "cumhaz", "hazard")) {
-    if (missing(times)) times <- object$data$Y[, 1][order(object$data$Y[, 1])]
-    assertthat::assert_that(all(is.numeric(times), times > 0))
-  } else if (stype == "rmst" && !missing(times)) {
-    assertthat::assert_that(all(is.numeric(times), times > 0))
-  } else {
-    times <- NULL
-  }
+  dots <- list(...)
+  dots$ci <- NULL
+  dots$cl <- NULL
+  dots$se <- NULL
 
-  nest_output <- ((stype == "quantile" && length(p) > 1) |
-                    (stype %in% c("survival", "cumhaz", "hazard", "rmst") &&
-                       length(times) > 1))
-
- res <- summary(
-   object = object,
-   newdata = newdata,
-   type = stype,
-   quantiles = p,
-   t = times,
-   ci = conf.int,
-   cl = conf.level,
-   se = se.fit,
-   tidy = FALSE,
-   ...)
+  res <- do.call(
+    summary,
+    c(list(
+      object = object,
+      newdata = newdata,
+      type = stype,
+      quantiles = p,
+      t = times,
+      ci = conf.int,
+      cl = conf.level,
+      se = se.fit,
+      tidy = FALSE
+    ), dots)
+  )
 
   res <- rename_tidy(unname(res))
-
   res <- tibble::tibble(.pred = res)
 
-  if (!nest_output) {
+  if (!((stype == "quantile" && length(p) > 1))) {
     res <- tidyr::unnest(res, ".pred")
   }
 

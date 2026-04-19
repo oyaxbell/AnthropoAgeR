@@ -6,7 +6,7 @@
 \alias{AnthropoAgeR-package}
 \title{AnthropoAgeR: Calculate Second Generation Biological Aging Measures Using AnthropoAge and PhenoAge}
 \description{
-What the package does (one paragraph).
+Description: Provides tools to estimate second-generation biological age biomarkers derived from anthropometric and clinical data, including AnthropoAge, S-AnthropoAge, and PhenoAge. The package also computes sex-stratified age acceleration measures (AnthropoAgeAccel and PhenoAgeAccel) based on published models and supports both individual-level and cohort-level calculations.
 }
 \seealso{
 Useful links:

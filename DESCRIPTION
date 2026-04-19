@@ -1,7 +1,7 @@
 Package: AnthropoAgeR
 Title: Calculate Second Generation Biological Aging Measures Using AnthropoAge and PhenoAge
 Version: 0.1.0
-Description: What the package does (one paragraph).
+Description: Description: Provides tools to estimate second-generation biological age biomarkers derived from anthropometric and clinical data, including AnthropoAge, S-AnthropoAge, and PhenoAge. The package also computes sex-stratified age acceleration measures (AnthropoAgeAccel and PhenoAgeAccel) based on published models and supports both individual-level and cohort-level calculations.
 VignetteBuilder: knitr
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -17,7 +17,6 @@ Depends:
     R (>= 4.1)
 Imports: 
     stats,
-    assertthat,
     tibble,
     tidyr,
     flexsurv
@@ -25,6 +24,7 @@ Suggests:
     utils,
     knitr,
     rmarkdown,
+    assertthat,
     testthat (>= 3.0.0)
 URL: https://github.com/oyaxbell/AnthropoAgeR
 BugReports: https://github.com/oyaxbell/AnthropoAgeR/issues

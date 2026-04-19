@@ -75,13 +75,6 @@ Alternatively, you will soon be able install the released version of
 # install.packages("globorisk")
 ```
 
-## Citation
-
-If you use this package, please cite:
-
-Fermín-Martínez et al., Aging Cell (2023)  
-Levine et al., Aging (2018)
-
 ## Example
 
 ### AnthropoAge calculation

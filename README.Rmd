@@ -58,7 +58,7 @@ Alternatively, you will soon be able install the released version of `AnthropoAg
 
 ``` r
 # not approved yet
-# install.packages("globorisk")
+# install.packages("AnthropoAgeR")
 ```
 
 

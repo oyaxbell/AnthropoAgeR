@@ -1,16 +1,34 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="190"/>
+# AnthropoAgeR
+
+<table>
+
+<tr>
+
+<td>
 
 ## Authors
 
-Omar Yaxmehen Bello-Chavolla, Carlos Alberto Fermín-Martínez
+Omar Yaxmehen Bello-Chavolla, Carlos Alberto Fermín-Martínez  
 <https://bellolab.org>
 
 Instituto Nacional de Geriatría, Mexico City, Mexico
 
 [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/oyaxbell)
+
+</td>
+
+<td width="200">
+
+<img src="inst/figures/AnthropoAgeR.png" width="180"/>
+
+</td>
+
+</tr>
+
+</table>
 
 ------------------------------------------------------------------------
 
@@ -56,6 +74,13 @@ Alternatively, you will soon be able install the released version of
 # not approved yet
 # install.packages("globorisk")
 ```
+
+## Citation
+
+If you use this package, please cite:
+
+Fermín-Martínez et al., Aging Cell (2023)  
+Levine et al., Aging (2018)
 
 ## Example
 

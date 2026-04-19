@@ -31,7 +31,7 @@ Instituto Nacional de Geriatría, Mexico City, Mexico
 
 <td width="200">
 
-<img src="inst/figures/AnthropoAgeR.png" width="180"/>
+<img src="inst/logo/logo.png" width="160"/>
 
 </td>
 </tr>

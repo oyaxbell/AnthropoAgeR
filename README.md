@@ -3,17 +3,6 @@
 
 # AnthropoAgeR <img src="inst/figures/AnthropoAgeR.png" align="right" width="180" height="190"/>
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/AnthropoAgeR?color=green)](https://cran.r-project.org/package=AnthropoAgeR)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/AnthropoAgeR?color=green)](https://cran.r-project.org/package=AnthropoAgeR)
-[![](http://cranlogs.r-pkg.org/badges/AnthropoAgeR?color=green)](https://cran.r-project.org/package=AnthropoAgeR)
-[![](http://cranlogs.r-pkg.org/badges/last-week/AnthropoAgeR?color=green)](https://cran.r-project.org/package=AnthropoAgeR)
-
-[![](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/bellochavolla_lab)
-[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/oyaxbell)
-[![](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/bellochavollalab)
-
-
-
 ## Authors
 
 Omar Yaxmehen Bello-Chavolla, Carlos Alberto Fermín-Martínez
@@ -21,6 +10,11 @@ Omar Yaxmehen Bello-Chavolla, Carlos Alberto Fermín-Martínez
 
 Instituto Nacional de Geriatría, Mexico City, Mexico
 
+[![](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/bellochavolla_lab/)
+
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/oyaxbell)
+
+[![](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/bellochavollalab)
 
 ------------------------------------------------------------------------
 
@@ -64,7 +58,7 @@ Alternatively, you will soon be able install the released version of
 
 ``` r
 # not approved yet
-# install.packages("AnthropoAgeR")
+# install.packages("globorisk")
 ```
 
 ## Example
@@ -153,7 +147,7 @@ To calculate accelerated aging metrics derived from AnthropoAge,
 S-AnthropoAge and PhenoAge, the `age_accel()` function must be used.
 This provides a sex-based estimate of accelerated aging for all metrics.
 AnthropoAgeAccel is interpreted as the average deviation of biological
-from chronological age and is specific for each population. Values ≥0
+from chronological age and is specific for each population. Values \>0
 indicate accelerated aging rates, whilst values\<0 indicate
 non-accelerated aging rates.
 

@@ -1,24 +1,49 @@
-#' @export age_accel
-#' @import flexsurv
-#' @import tidyverse
-#' @import parallel
-#' @import stats
-#' @import tibble
-#' @import tidyr
-#' @import knitr
+#' Calculate Age Acceleration
+#'
+#' @description Computes biological age acceleration as residuals from
+#' a linear model of BA ~ Age, stratified by sex.
+#'
+#' @param Age Numeric vector (chronological age)
+#' @param BA Numeric vector (biological age)
+#' @param Sex Character vector ("Men", "Women")
+#'
+#' @return Numeric vector of residuals
+#' @export
+#' @importFrom stats lm residuals
 
-age_accel<-function(Age, BA, Sex){
-  n<-length(Age)
-  if (n<10){return("For optimal calculations please only estimate AntropoAgeAccel for samples greater than or equal to10")}
-  else{
-    x<-data.frame(Age, BA, Sex)
-    for(i in 1:nrow(x)){
-      if(x$Sex[i]=="Women"){
-        output<-lm(x$BA ~ x$Age, x %>% filter(Sex=="Women")) %>% residuals}
-      else if(x$Sex[i]=="Men") {
-        output<-lm(x$BA ~ x$Age, x %>% filter(Sex=="Men")) %>% residuals}
+age_accel <- function(Age, BA, Sex) {
+
+  n <- length(Age)
+
+  if (!all(lengths(list(BA, Sex)) == n)) {
+    stop("All inputs must have the same length", call. = FALSE)
   }
-    ##Output
-    output[is.infinite(output)]<-NA
-    names(output) <- NULL
-    return(output)}}
+
+  if (!all(Sex %in% c("Men", "Women"))) {
+    stop("Sex must be 'Men' or 'Women'", call. = FALSE)
+  }
+
+  if (n < 10) {
+    warning("Sample size < 10; results may be unstable", call. = FALSE)
+  }
+
+  x <- data.frame(Age = Age, BA = BA, Sex = Sex)
+
+  accel <- rep(NA_real_, n)
+
+  idx_w <- Sex == "Women"
+  if (any(idx_w)) {
+    fit_w <- lm(BA ~ Age, data = x[idx_w, ])
+    accel[idx_w] <- residuals(fit_w)
+  }
+
+  idx_m <- Sex == "Men"
+  if (any(idx_m)) {
+    fit_m <- lm(BA ~ Age, data = x[idx_m, ])
+    accel[idx_m] <- residuals(fit_m)
+  }
+
+  accel[is.infinite(accel)] <- NA_real_
+
+  return(accel)
+}

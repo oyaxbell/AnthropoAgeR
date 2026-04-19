@@ -1,3 +1,3 @@
-# AnthropoAge (development version)
+# AnthropoAgeR 0.1.3
 
-* Initial CRAN submission.
+- Updated functions for optimization

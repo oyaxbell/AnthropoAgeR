@@ -18,8 +18,13 @@ Depends:
 Imports: 
     stats,
     assertthat,
-    tidyr,
-    tibble
-Suggests: utils, knitr, rmarkdown
+    tibble,
+    tidyr
+Suggests: 
+    utils,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
 URL: https://github.com/oyaxbell/AnthropoAgeR
 BugReports: https://github.com/oyaxbell/AnthropoAgeR/issues
+Config/testthat/edition: 3

@@ -24,5 +24,6 @@ Numeric vector of S-AnthropoAge
 }
 \description{
 Computes S-AnthropoAge as a proxy of biological age using
-anthropometric variables, age, sex and ethnicity using a vectorized approach.
+anthropometric variables, age, sex and ethnicity using a parallel
+computing approach. Recommended only for sample sizes n > 1,000.
 }

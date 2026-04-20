@@ -20,11 +20,9 @@ s_anthropoage <- function(Age, Sex, Height, Weight, Waist, Ethnicity) {
     stop("Sex must be 'Men' or 'Women'", call. = FALSE)
   }
 
-  if (!is.numeric(Age)) stop("Age must be numeric")
-
   n <- length(Age)
   if (!all(lengths(list(Sex, Height, Weight, Waist, Ethnicity)) == n)) {
-    stop("All inputs must have same length")
+    stop("All inputs must have same length", call. = FALSE)
   }
 
   BMI <- Weight / (Height^2)
@@ -49,31 +47,27 @@ s_anthropoage <- function(Age, Sex, Height, Weight, Waist, Ethnicity) {
   is_women <- Sex == "Women"
   is_men   <- Sex == "Men"
 
-  pred <- numeric(nrow(x))
+  pred <- numeric(n)
 
   if (any(is_women)) {
-    pF <- predict(
-      gomp1aF1,
-      newdata = x[is_women, ],
-      type = "survival",
-      ci = FALSE,
-      times = 120
-    )
+    pF <- predict(gomp1aF1,
+                  newdata = x[is_women, ],
+                  type = "survival",
+                  ci = FALSE,
+                  times = 120)
     pred[is_women] <- 1 - as.numeric(pF$.pred)
   }
 
   if (any(is_men)) {
-    pM <- predict(
-      gomp1aM1,
-      newdata = x[is_men, ],
-      type = "survival",
-      ci = FALSE,
-      times = 120
-    )
+    pM <- predict(gomp1aM1,
+                  newdata = x[is_men, ],
+                  type = "survival",
+                  ci = FALSE,
+                  times = 120)
     pred[is_men] <- 1 - as.numeric(pM$.pred)
   }
 
-  output <- numeric(length(pred))
+  output <- numeric(n)
 
   output[is_women] <- (log(-sW1 * log(1 - pred[is_women])) - b0W1) / b1W1
   output[is_men]   <- (log(-sM1 * log(1 - pred[is_men])) - b0M1) / b1M1

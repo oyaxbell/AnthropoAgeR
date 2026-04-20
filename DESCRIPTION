@@ -19,7 +19,9 @@ Imports:
     stats,
     tibble,
     tidyr,
-    flexsurv
+    doParallel,
+    foreach,
+    parallel
 Suggests: 
     utils,
     knitr,

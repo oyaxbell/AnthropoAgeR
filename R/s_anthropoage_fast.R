@@ -121,8 +121,8 @@ s_anthropoage_fast <- function(Age, Sex, Height, Weight, Waist, Ethnicity) {
   }
 
   #Gompertz survival predictions
-  pred[is_women] <- 1 - as.numeric(pF$.pred_survival)
-  pred[is_men] <- 1 - as.numeric(pM$.pred_survival)
+  pred[is_women] <- 1 - as.numeric(pF$.pred)
+  pred[is_men] <- 1 - as.numeric(pM$.pred)
 
   #AnthropoAge
   output[is_women] <- (log(-sW1 * log(1 - pred[is_women])) - b0W1) / b1W1
